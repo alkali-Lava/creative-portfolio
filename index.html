@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Selected creative and marketing projects by Qifan (Lava) Wu across design, illustration, and fine art.">
+  <title>Qifan (Lava) Wu — Creative &amp; Marketing Projects</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23ffffff'/%3E%3Crect x='14' y='10' width='10' height='44' fill='%231d1d1f'/%3E%3Crect x='14' y='44' width='34' height='10' fill='%23ee5a24'/%3E%3Ccircle cx='42' cy='34' r='7' fill='%23f1a99b'/%3E%3C/svg%3E">
+  <style>
+    :root{
+      --paper:#ffffff;--tile:#f4f4f2;--ink:#141414;--mute:#6e6b63;--hair:rgba(20,20,20,.18);
+      --lava:#ee5a24;--sage:#7fa99b;--rose:#f1a99b;--apricot:#f2c9a0;--charcoal:#1d1d1f;
+      --pad:clamp(18px,4vw,56px)
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;color:var(--ink);background:var(--paper);font:14px/1.55 "Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit}
+    img,video,svg{display:block;max-width:100%}
+    .one{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .skip{position:fixed;left:16px;top:-80px;z-index:200;padding:8px 12px;background:var(--ink);color:#fff;font-size:12px}.skip:focus{top:16px}
+    .label{margin:0;font-size:11px;line-height:1.3;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+
+    /* top bar */
+    .topbar{position:sticky;top:0;z-index:50;height:52px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 var(--pad);background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--hair)}
+    .brand{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.14em;text-decoration:none;white-space:nowrap}
+    .brand i{width:12px;height:12px;border-radius:50%;background:var(--ink);box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--lava)}
+    .topnav{display:flex;gap:22px;white-space:nowrap}
+    .topnav a{font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:4px 0;border-bottom:1px solid transparent}
+    .topnav a:hover,.topnav a:focus-visible{border-bottom-color:currentColor}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:4vw;padding:clamp(28px,4vw,52px) var(--pad)}
+    .hero h1{margin:18px 0 0;font-weight:300;font-size:clamp(30px,4.6vw,62px);line-height:1;letter-spacing:-.03em;white-space:nowrap}
+    .hero h1 em{font-style:normal;color:var(--mute)}
+    .hero-intro{max-width:500px;margin:26px 0 0;font-size:15px;color:#3b3a36}
+    .roles{display:flex;flex-wrap:wrap;align-items:center;margin:24px 0 0;font-size:16px;font-weight:400;letter-spacing:.01em;color:var(--ink)}.roles span{white-space:nowrap}.roles span+span:before{content:"";display:inline-block;width:1px;height:14px;margin:0 16px;vertical-align:-2px;background:var(--lava)}
+    .mini-index{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}.mini-index a{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid var(--hair);font-size:12px;text-decoration:none;white-space:nowrap;transition:border-color .2s,background .2s}.mini-index a:hover,.mini-index a:focus-visible{border-color:var(--ink);background:rgba(20,20,20,.03)}.mini-index span{font-size:10px;letter-spacing:.1em;color:var(--mute)}.mini-index .glyph{width:9px;height:9px}
+    .hero-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:30px}
+    .hero-art{justify-self:end;width:min(100%,560px)}
+
+    /* index */
+    .project-index{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--hair)}
+    .project-index a{display:flex;align-items:center;gap:14px;padding:22px var(--pad);text-decoration:none;border-right:1px solid var(--hair);white-space:nowrap;transition:background .25s}
+    .project-index a:last-child{border-right:0}
+    .project-index a:hover{background:rgba(20,20,20,.035)}
+    .project-index strong{font-weight:400;font-size:18px;letter-spacing:-.01em}
+    .project-index span{margin-left:auto;font-size:11px;color:var(--mute);letter-spacing:.12em}
+    .glyph{flex:0 0 auto;width:14px;height:14px}
+    .g-tri{background:var(--sage);clip-path:polygon(50% 0,100% 100%,0 100%)}
+    .g-sq{background:var(--lava)}
+    .g-ci{background:var(--rose);border-radius:50%}
+
+    /* categories */
+    .category{scroll-margin-top:52px}
+    .category-head{display:flex;align-items:baseline;gap:18px;padding:40px var(--pad) 16px;border-bottom:1px solid var(--ink)}
+    .category-head .glyph{align-self:center}
+    .category-no{font-size:11px;letter-spacing:.14em;color:var(--mute);white-space:nowrap}
+    .category h2{margin:0;font-weight:300;font-size:clamp(24px,2.8vw,36px);line-height:1;letter-spacing:-.02em;white-space:nowrap}
+    .category-head p{margin:0 0 0 auto;max-width:640px;font-size:12px;color:var(--mute);text-align:right}
+
+    .series{display:grid;grid-template-columns:280px minmax(0,1fr);gap:36px;padding:28px var(--pad);border-bottom:1px solid var(--hair)}
+    .series-info{min-width:0}
+    .series h3{margin:8px 0 12px;font-weight:500;font-size:17px;line-height:1.3;letter-spacing:-.005em}
+    .series-meta{display:flex;flex-wrap:nowrap;gap:0;overflow:hidden;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);white-space:nowrap}
+    .series-meta span+span:before{content:"·";margin:0 7px}
+    .series-description{margin:14px 0 0;font-size:13px;color:#3b3a36}
+    .external-link{display:inline-block;margin-top:14px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;text-underline-offset:4px;white-space:nowrap}
+
+    /* grid preview */
+    .grid{--th:190px;display:flex;flex-wrap:wrap;align-items:flex-start;gap:12px}
+    .tile{margin:0;flex:0 0 auto;display:flex;flex-direction:column;max-width:100%}
+    .tile button{position:relative;display:block;padding:0;border:0;background:none;cursor:zoom-in;overflow:hidden;max-width:100%}
+    .tile img{display:block;height:var(--th);width:auto;max-width:100%;object-fit:contain;transition:opacity .25s ease}
+    .tile button:hover img,.tile button:focus-visible img{opacity:.85}
+    .tile button:focus-visible{outline:2px solid var(--lava);outline-offset:2px}
+    .play{position:absolute;left:50%;top:50%;width:42px;height:42px;margin:-21px 0 0 -21px;border-radius:50%;background:rgba(20,20,20,.82)}
+    .play:after{content:"";position:absolute;left:17px;top:13px;border-left:12px solid var(--paper);border-top:8px solid transparent;border-bottom:8px solid transparent}
+    .film{position:relative;display:flex;flex-direction:column;justify-content:space-between;height:var(--th);aspect-ratio:16/9;padding:16px 18px;background:#1c1d22;color:#fff;text-decoration:none;overflow:hidden}
+    .film:before{content:"";position:absolute;right:-28px;top:-28px;width:120px;height:120px;border-radius:50%;background:var(--lava);opacity:.9}
+    .film:after{content:"";position:absolute;right:58px;bottom:-30px;width:70px;height:70px;background:var(--sage);transform:rotate(18deg);opacity:.85}
+    .film>*{position:relative;z-index:1}
+    .film-kicker{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#bdb9ae}
+    .film-title{font-size:20px;font-weight:300;line-height:1.1;letter-spacing:-.01em;text-transform:uppercase;max-width:70%}
+    .film-cta{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+    .film-cta i{width:22px;height:22px;border-radius:50%;background:#fff;position:relative}
+    .film-cta i:after{content:"";position:absolute;left:8px;top:6px;border-left:8px solid #1c1d22;border-top:5px solid transparent;border-bottom:5px solid transparent}
+    .film:hover .film-cta,.film:focus-visible .film-cta{text-decoration:underline;text-underline-offset:3px}
+    .film:focus-visible{outline:2px solid var(--lava);outline-offset:2px}
+    .film.has-poster{padding:0;background:none}
+    .film.has-poster .play{position:absolute;z-index:1}
+    .film.has-poster:before,.film.has-poster:after{display:none}
+    .film.has-poster img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .25s}
+    .film.has-poster:hover img,.film.has-poster:focus-visible img{opacity:.88}
+    .film-badge{position:absolute;left:10px;bottom:10px;padding:4px 8px;background:rgba(20,20,20,.72);color:#fff;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+    .tile figcaption{display:flex;justify-content:space-between;gap:10px;width:0;min-width:100%;margin-top:6px;font-size:11px}
+    .tile figcaption span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .tile figcaption span:last-child{flex:0 0 auto;color:var(--mute)}
+
+
+    /* single-row scrolling strip for larger projects */
+    .strip{position:relative;min-width:0}
+    .strip .grid{--th:300px;flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;scroll-behavior:smooth;padding-bottom:12px;scrollbar-width:thin;scrollbar-color:var(--ink) transparent}
+    .strip .grid::-webkit-scrollbar{height:3px}.strip .grid::-webkit-scrollbar-thumb{background:var(--ink)}
+    .strip .tile{scroll-snap-align:start;max-width:none}
+    .strip .tile button,.strip .tile img{max-width:none}
+    .strip.end:after{opacity:0}
+    .strip:after{transition:opacity .2s;content:"";position:absolute;top:0;right:0;bottom:12px;width:48px;pointer-events:none;background:linear-gradient(90deg,rgba(255,255,255,0),#fff)}
+    .strip-nav{display:flex;align-items:center;gap:8px;margin-top:18px}
+    .strip-nav button{width:32px;height:32px;border:1px solid var(--hair);border-radius:50%;background:#fff;color:var(--ink);font-size:14px;cursor:pointer;transition:border-color .2s,background .2s}
+    .strip-nav button:hover,.strip-nav button:focus-visible{border-color:var(--ink)}
+    .strip-nav button:disabled{opacity:.3;cursor:default}
+    .sn-count{margin-left:6px;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+
+    /* compact block: small projects packed side by side */
+    .pack{display:flex;flex-wrap:wrap;align-items:flex-start;gap:36px 32px;padding:30px var(--pad) 36px;border-bottom:1px solid var(--hair)}
+    .card{flex:0 0 auto;width:min-content;min-width:240px;max-width:100%;display:flex;flex-direction:column}
+    .card .grid{flex-wrap:nowrap;gap:8px}
+    .card .tile,.card .tile button,.card .tile img{max-width:none}
+    .card .tile figcaption{display:none}
+    .card .label{margin-top:14px}
+    .card h3{margin:6px 0 8px;font-weight:500;font-size:15px;line-height:1.3}
+    .card .series-description{margin-top:8px;font-size:12.5px;line-height:1.5}
+    .card .external-link{margin-top:10px}
+
+    /* statement */
+    .statement{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6vw;align-items:center;padding:clamp(60px,9vw,120px) var(--pad);border-bottom:1px solid var(--hair)}
+    .statement h2{margin:16px 0 0;font-weight:300;font-size:clamp(24px,3vw,40px);line-height:1.15;letter-spacing:-.02em;white-space:nowrap}
+    .statement-copy{max-width:520px;font-size:14px;color:#3b3a36}
+    .statement-copy p{margin:0 0 12px}
+    .legend{display:flex;gap:22px;margin-top:26px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);white-space:nowrap}
+    .legend span{display:flex;align-items:center;gap:8px}
+    .legend .glyph{width:10px;height:10px}
+
+    /* footer */
+    footer{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);background:#1c1d22;color:var(--paper)}
+    .contact{padding:64px var(--pad)}
+    .contact .label{color:#9a978d;margin-bottom:14px}.bio{max-width:520px;margin-bottom:36px;font-size:13px;line-height:1.6;color:#cfcbc0}.bio p{margin:0 0 10px}
+    .contact h2{margin:16px 0 28px;font-weight:300;font-size:clamp(26px,3.2vw,42px);line-height:1.1;letter-spacing:-.02em;white-space:nowrap}
+    .contact-links{display:flex;flex-wrap:wrap;gap:10px 26px}
+    .contact-links a{font-size:13px;text-underline-offset:4px;white-space:nowrap}
+    .copyright{margin-top:56px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#8a877e}
+    .footer-art{position:relative;min-height:300px;overflow:hidden}
+    .footer-art svg{position:absolute;inset:0;width:100%;height:100%}
+
+    /* lightbox */
+    dialog{width:min(94vw,1300px);height:min(92vh,920px);max-width:none;max-height:none;padding:52px 64px 44px;border:0;background:var(--paper)}
+    dialog::backdrop{background:rgba(20,20,20,.82)}
+    .lb-stage{width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+    .lb-stage img,.lb-stage video{max-width:100%;max-height:100%;object-fit:contain}
+    .lb-cap{position:absolute;left:64px;right:64px;bottom:14px;display:flex;justify-content:space-between;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);white-space:nowrap}
+    .lb-btn{position:absolute;width:36px;height:36px;border:1px solid var(--ink);border-radius:50%;background:transparent;color:var(--ink);font-size:16px;line-height:1;cursor:pointer}
+    .lb-btn:hover{background:var(--ink);color:var(--paper)}
+    .lb-close{top:10px;right:14px}.lb-prev{left:14px;top:50%;margin-top:-18px}.lb-next{right:14px;top:50%;margin-top:-18px}
+
+    @media(max-width:960px){
+      .hero{grid-template-columns:minmax(0,1fr);min-height:auto}
+      .hero-art{justify-self:center;width:min(100%,460px)}
+      .series{grid-template-columns:1fr;gap:20px}
+      .category-head{flex-wrap:wrap}
+      .category-head p{flex-basis:100%;margin:6px 0 0;text-align:left}
+      .statement,footer{grid-template-columns:1fr}
+    }
+    @media(max-width:640px){
+      .topbar{height:auto;flex-direction:column;align-items:flex-start;gap:6px;padding:10px var(--pad)}
+      .topnav{gap:14px}
+      .project-index{grid-template-columns:1fr}
+      .project-index a{border-right:0;border-bottom:1px solid var(--hair)}
+      .grid{--th:120px;gap:8px}.strip .grid{--th:200px}.strip-nav button{display:none}.strip-nav{margin-top:8px}.sn-count{margin-left:0}.film{padding:10px 12px}.film-title{font-size:14px}.film:before{width:70px;height:70px}
+      .pack{gap:28px}.card{width:100%;min-width:0}.card .grid{flex-wrap:wrap}.card .tile,.card .tile button,.card .tile img{max-width:100%}
+      .statement h2,.contact h2{white-space:normal}.hero h1{font-size:10vw}.roles{flex-wrap:nowrap;font-size:14px}.roles span+span:before{margin:0 10px;height:12px}.hero .label.one{white-space:normal}.hero-meta{flex-wrap:wrap;gap:8px 16px}
+      dialog{padding:48px 12px 40px}.lb-cap{left:12px;right:12px}.lb-prev,.lb-next{top:auto;bottom:8px;margin:0}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#work">Skip to selected work</a>
+  <header class="topbar">
+    <a class="brand" href="#top"><i aria-hidden="true"></i>QIFAN (LAVA) WU</a>
+    <nav class="topnav" aria-label="Primary"><a href="#design">Design</a><a href="#illustration">Illustration</a><a href="#fine-art">Fine Art</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <main id="work">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="label one">Selected Commission Work · Creative &amp; Marketing</p>
+        <h1>Qifan <em>(Lava)</em> Wu</h1>
+        <p class="roles"><span>Mixed Media Artist</span><span>Writer</span><span>Growth Marketer</span></p>
+        <div class="hero-meta"><span class="label">Philadelphia</span><span class="label">Boston</span><span class="label">Shanghai</span><span class="label">Available Worldwide</span></div>
+        <nav class="mini-index" aria-label="Project categories"><a href="#design"><i class="glyph g-tri"></i>Design<span>01</span></a><a href="#illustration"><i class="glyph g-sq"></i>Illustration<span>02</span></a><a href="#fine-art"><i class="glyph g-ci"></i>Fine Art<span>03</span></a></nav>
+      </div>
+      <!-- Hero mark: the letters L·A·V·A built from simple shapes -->
+      <svg class="hero-art" viewBox="0 56 640 374" role="img" aria-label="LAVA spelled out in geometric shapes">
+        <!-- ground line -->
+        <line x1="10" y1="372" x2="630" y2="372" stroke="#1d1d1f" stroke-width="1"/>
+        <!-- L : column + slab + resting dot -->
+        <rect x="40" y="110" width="34" height="250" fill="#1d1d1f"/>
+        <rect x="40" y="326" width="112" height="34" fill="#ee5a24"/>
+        <circle cx="128" cy="304" r="22" fill="#f1a99b"/>
+        <!-- A : two strokes + floating disc as crossbar -->
+        <line x1="176" y1="360" x2="240" y2="110" stroke="#1d1d1f" stroke-width="4" stroke-linecap="round"/>
+        <line x1="240" y1="110" x2="304" y2="360" stroke="#1d1d1f" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="240" cy="270" r="30" fill="#7fa99b" style="mix-blend-mode:multiply"/>
+        <circle cx="240" cy="110" r="7" fill="#ee5a24"/>
+        <!-- V : two bars meeting, sun sinking into the mouth -->
+        <circle cx="400" cy="128" r="44" fill="#f2c9a0"/>
+        <polygon points="330,110 358,110 404,338 390,360" fill="#1d1d1f"/>
+        <polygon points="470,110 444,110 398,338 412,360" fill="#ee5a24" style="mix-blend-mode:multiply"/>
+        <!-- A : solid mountain with a round counter and an extended crossbar -->
+        <polygon points="566,110 630,360 502,360" fill="#7fa99b"/>
+        <circle cx="566" cy="276" r="20" fill="#ffffff"/>
+        <line x1="486" y1="318" x2="636" y2="318" stroke="#1d1d1f" stroke-width="2"/>
+        <!-- small accents -->
+        <circle cx="616" cy="76" r="12" fill="none" stroke="#ee5a24" stroke-width="2"/>
+        <path d="M430 408h170" stroke="#ee5a24" stroke-width="3"/>
+        <circle cx="330" cy="414" r="6" fill="#f1a99b"/>
+      </svg>
+    </section>
+
+    <div id="portfolio"></div>
+
+  </main>
+
+  <footer id="contact">
+    <div class="contact">
+      <p class="label">About</p>
+      <div class="bio">
+        <p>Lava Wu (She/Her) is a mixed media artist and writer working on psychology, humanity, and social topics that convey empathy, love, spiritual development, and sustainability.</p>
+        <p>She takes commissions worldwide across both fine art and commercial work — regardless of form, she always aims to portray emotion and create an atmosphere that connects with the audience.</p>
+      </div>
+      <p class="label">Selected collaborations &amp; commissions</p>
+      <div class="contact-links"><a href="mailto:laaavawu@gmail.com">laaavawu@gmail.com</a><a href="https://www.linkedin.com/in/qifanlavawu/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+      <p class="copyright">© <span id="year"></span> Qifan (Lava) Wu</p>
+    </div>
+    <div class="footer-art" aria-hidden="true">
+      <svg viewBox="0 0 560 360" preserveAspectRatio="xMidYMid meet">
+        <!-- L -->
+        <rect x="40" y="90" width="24" height="180" fill="#f2eee5"/>
+        <rect x="40" y="246" width="82" height="24" fill="#ee5a24"/>
+        <!-- A : rounded arch with a round counter -->
+        <path d="M134 270V176a56 56 0 0 1 112 0v94h-30v-46h-52v46z" fill="#7fa99b"/>
+        <circle cx="190" cy="176" r="17" fill="#1c1d22"/>
+        <!-- V -->
+        <polygon points="272,96 368,96 320,270" fill="none" stroke="#f2eee5" stroke-width="2"/>
+        <circle cx="320" cy="146" r="20" fill="#f1a99b"/>
+        <!-- A : solid peak, crossbar cut out as negative space -->
+        <polygon points="455,90 512,270 398,270" fill="#f2c9a0"/>
+        <rect x="380" y="206" width="150" height="14" fill="#1c1d22"/>
+        <line x1="392" y1="213" x2="410" y2="213" stroke="#ee5a24" stroke-width="2"/>
+        <circle cx="455" cy="74" r="7" fill="#ee5a24"/>
+        <!-- ground -->
+        <line x1="20" y1="300" x2="540" y2="300" stroke="#f2eee5" stroke-width="1" opacity=".5"/>
+        <circle cx="150" cy="300" r="6" fill="#f2c9a0"/>
+        <rect x="340" y="290" width="20" height="20" fill="#ee5a24"/>
+      </svg>
+    </div>
+  </footer>
+
+  <dialog id="lightbox" aria-label="Artwork preview">
+    <button class="lb-btn lb-close" type="button" aria-label="Close preview">×</button>
+    <button class="lb-btn lb-prev" type="button" aria-label="Previous">←</button>
+    <button class="lb-btn lb-next" type="button" aria-label="Next">→</button>
+    <div class="lb-stage"></div>
+    <div class="lb-cap"><span class="lb-name"></span><span class="lb-count"></span></div>
+  </dialog>
+
+  <script>
+    const categories=[
+      {id:'design',no:'01',glyph:'g-tri',title:'Design',intro:'Campaign systems, web design, motion experiments, and visual identities built for communication.',projects:[
+        {title:'Green AI Summit Campaign',meta:['2024','Campaign Design','Social & Event'],desc:'A connected suite of promotional graphics for an AI and sustainability summit, from speaker announcements to program information and event-day communications.',media:Array.from({length:9},(_,i)=>({src:`mkt-${String(i+1).padStart(2,'0')}.jpg`,name:['Campaign Key Visual','Campaign Graphic','Social Announcement','Event Communication','Speaker Promotion','Marketing Layout','Branded Content','Event Post','Campaign Application'][i],note:`${i+1} / 09`}))},
+        {title:'AI Motion & Digital Experiments',meta:['2023–2024','AIGC','Moving Image'],desc:'Three short-form experiments explore speculative environments, product storytelling, and the unstable texture of memory through generative image and motion tools.',media:[{type:'link',href:'https://lnkd.in/p/g65fUJPZ',name:'The Artist’s Subject',kicker:'AI Film',note:'Film',poster:'aigc-artists-subject.jpg'},{src:'space-home.m4v',poster:'aigc-space-home.jpg',name:'Space = Home?',note:'Motion',type:'video'},{src:'product-demo.m4v',poster:'aigc-product-demo.jpg',name:'Product Demo',note:'Motion',type:'video'},{src:'fading-memory.m4v',poster:'aigc-fading-memory.jpg',name:'Fading Memory',note:'Motion',type:'video'}]},
+        {title:'Venture Partner Web Design',meta:['2024','UI / UX','Visual Design'],desc:'A clear, contemporary web direction for a venture partner brand, balancing editorial hierarchy with an approachable digital presence.',media:[{src:'web-design.jpg',name:'Website Direction',note:'Web Design'}]},
+        {title:'Surface, Package & Graphic Design',meta:['Selected Work','Pattern','Packaging'],desc:'Surface patterns, packaging applications, and graphic systems developed from hand-drawn forms and character-led visual language.',media:[{src:'mfa-design-01.jpg',name:'Surface & Package Studies',note:'I'},{src:'mfa-design-02.jpg',name:'Pattern & Graphic Applications',note:'II'}]}
+      ]},
+      {id:'illustration',no:'02',glyph:'g-sq',title:'Illustration',intro:'Book covers, characters, sequential narratives, and image series with a surreal, tactile voice.',projects:[
+        {title:'Book Covers',meta:['Commissioned','Editorial'],desc:'Two contrasting directions: the psychological tension of Deadly Cross and the ornamental storytelling of Book of Fairy Tales.',media:[{src:'book-deadly-cross.jpg',name:'Deadly Cross',note:'Cover'},{src:'book-fairy-tales.jpg',name:'Book of Fairy Tales',note:'Cover'}]},
+        {title:'Character Collection',meta:['Character Design','Pattern'],desc:'A playful library of expressive figures created for flexible use across publishing, merchandise, and branded visual systems.',media:[{src:'character-design.jpg',name:'Character Collection',note:'Sheet'}]},
+        {title:'Dear Miss Lonely Footprint',meta:['Visual Narrative','Sequential Art'],desc:'A personal visual narrative in which solitude, memory, and companionship unfold through a recurring footprint motif.',media:[{src:'dear-miss-footprint.jpg',name:'Narrative Sequence',note:'I'},{src:'mfa-dear-miss.jpg',name:'Project Overview',note:'II'}]},
+        {title:'Bunny Lava’s Journey',meta:['Series','Mixed media on canvas board','8 × 10 in'],desc:'A character-led journey through shifting spaces and emotional states, told across six mixed media panels.',media:[1,2,3,4,5,6].map((n,i)=>({src:`il-bunny-0${n}.jpg`,name:'Bunny Lava’s Journey',note:['I','II','III','IV','V','VI'][i]}))},
+        {title:'The Disease',meta:['Series','Oil on canvas','Clay & photography'],desc:'Prompted by the 2019 Essex lorry deaths, a reflection on the essence of illegal immigration — and the conclusion that poverty is a terminal illness.',media:[{src:'il-disease-01.jpg',name:'The Disease',note:'Oil, 17 × 22 in'},{src:'il-disease-02.jpg',name:'The Disease',note:'Oil, 8 × 10 in'},{src:'il-disease-03.jpg',name:'The Disease',note:'Clay & photography'},{src:'il-disease-04.jpg',name:'The Disease',note:'Clay & photography'},{src:'il-disease-05.jpg',name:'The Disease',note:'Clay & photography'},{src:'il-disease-06.jpg',name:'The Disease',note:'Clay & photography'}]},
+        {title:'The Reunion',meta:['Mixed Media Book','6.5 × 8.5 × 1 in'],desc:'A mixed media book built around a flash murder story: a headteacher dies on the day of a class’s ten-year reunion. Read front and back, the two versions assemble the whole picture.',media:[1,2,3,4,5].map(n=>({src:`il-reunion-0${n}.jpg`,name:'The Reunion',note:`Spread ${n}`}))},
+        {title:'Die in Nightmares',meta:['Illustration','Selected Work'],desc:'A dense dreamscape that turns fear, repetition, and nocturnal imagery into a layered composition.',media:[{src:'mfa-nightmares.jpg',name:'Die in Nightmares',note:''}]},
+        {title:'Tears of the Earth',meta:['Illustration','Environment'],desc:'An image-led reflection on ecological fragility, translating environmental loss into an intimate visual metaphor.',media:[{src:'mfa-tears-earth.jpg',name:'Tears of the Earth',note:''}]},
+        {title:'Watercolor Studies',meta:['Watercolor','Studies'],desc:'Observational and imaginative studies shaped by translucent color, quick mark-making, and the unpredictability of water.',media:[{src:'mfa-watercolor.jpg',name:'Watercolor Studies',note:''}]},
+        {title:'Bad Seeds',meta:['Illustration','Character Narrative'],desc:'A compact narrative world populated by unruly forms, dark humor, and characters that resist behaving as expected.',media:[{src:'mfa-bad-seeds.jpg',name:'Bad Seeds',note:''}]},
+        {title:'Animals in the Circus',meta:['Illustration','Installation'],desc:'An illustrated and spatial project examining spectacle, performance, and the uneasy relationship between audience and animal.',media:[{src:'mfa-animals-circus.jpg',name:'Animals in the Circus',note:'Overview'}]}
+      ]},
+      {id:'fine-art',no:'03',glyph:'g-ci',title:'Fine Art',intro:'Sculpture, installation, and painting — bodily tension, ritual, color, and gesture in physical and painted space.',projects:[
+        {title:'Escape',meta:['Sculpture','Mixed Media'],desc:'A suspended, body-like form caught between containment and release.',media:[{src:'sculpture-escape.jpg',name:'Escape',note:'Installation'}]},
+        {title:'Repetition & Breath',meta:['Installation','Moving Image'],desc:'A study of rhythm and embodiment in which repeated physical forms are extended through moving image and time.',media:[{src:'sculpture-repetition.jpg',name:'Repetition & Breath',note:'Installation'},{src:'repetition-breath.m4v',poster:'sculpture-repetition.jpg',name:'Repetition & Breath',note:'Video',type:'video'}]},
+        {title:'Red Magic Lily I & II',meta:['Painting','Diptych'],desc:'A two-part study in growth, transformation, and vivid botanical symbolism.',media:[1,2].map(n=>({src:`painting-red-magic-lily-${n}.jpg`,name:'Red Magic Lily',note:n===1?'I':'II'}))},
+        {title:'Doomsday Fantasy',meta:['Painting','Selected Work'],desc:'An imagined landscape where playful color and apocalyptic tension coexist.',media:[{src:'painting-doomsday.jpg',name:'Doomsday Fantasy',note:''}]},
+        {title:'Utopia',meta:['Painting','Oil, acrylic & yarn','30 × 40 in'],desc:'An unstable ideal world rendered through drifting forms, submerged color, and a sense of imminent disappearance.',media:[{src:'painting-utopia.jpg',name:'Utopia',note:''}]},
+        {title:'Untitled',meta:['Painting','Abstract'],desc:'A gestural field of compressed marks and layered color, driven by rhythm rather than fixed narrative.',media:[{src:'painting-untitled.jpg',name:'Untitled',note:''}]},
+        {title:'Dandelion',meta:['Painting','Oil on canvas','18 × 24 in'],desc:'A pair of oil paintings following a small blue companion through night water and a dreamlike grove.',media:[1,2].map(n=>({src:`fa-dandelion-0${n}.jpg`,name:'Dandelion',note:n===1?'I':'II'}))},
+        {title:'Ending Page',meta:['Painting','Oil and yarn on canvas','18 × 24 in'],desc:'A reclining figure adrift on patterned waves — oil and yarn worked together on canvas.',media:[{src:'fa-ending-page.jpg',name:'Ending Page',note:''}]},
+        {title:'Trick & Trap',meta:['Painting','Series of Five'],desc:'Five connected paintings where playful surfaces, hidden structures, and visual misdirection create a shifting narrative.',media:[1,2,3,4,5].map((n,i)=>({src:`trap-0${n}.jpg`,name:'Trick & Trap',note:`${['I','II','III','IV','V'][i]} / V`}))},
+        {title:'Vanished Fish',meta:['Painting & Embroidery','Oil and yarn on canvas'],desc:'Inspired by memories and nostalgia of the Hakka ancient town where she was born — koi, the fishbowl, peach trees, and red yarn carry the narrative as symbols.',media:[{src:'fa-vanished-fish-01.jpg',name:'Vanished Fish',note:'Oil & yarn, 18 × 24 in'},{src:'fa-vanished-fish-02.jpg',name:'Vanished Fish',note:'Oil & yarn, 10 × 20 in'},{src:'fa-vanished-fish-embroidery-01.jpg',name:'Vanished Fish',note:'Embroidery'},{src:'fa-vanished-fish-embroidery-02.jpg',name:'Vanished Fish',note:'Embroidery'}]},
+        {title:'Knots',meta:['Painting','Oil and yarn on canvas'],desc:'A series on trauma and mental health. Close-ups of the stomach, heart, and head trace how a hurtful mental disaster unfolds and how it marks the body.',media:[{src:'fa-knots-01.jpg',name:'Knots',note:'10 × 20 in'},{src:'fa-knots-02.jpg',name:'Knots',note:'10 × 20 in'},{src:'fa-knots-03.jpg',name:'Knots',note:'10 × 20 in'},{src:'fa-knots-04.jpg',name:'Knots',note:'18 × 24 in'}]}
+      ]}
+    ];
+
+    const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const groups=[];
+    const tileHTML=(m,g,k)=>`<figure class="tile"><button type="button" data-g="${g}" data-k="${k}" aria-label="${esc(m.name)}${m.type==='video'?' (video)':''}. Open larger preview."><img src="media/${esc(m.poster||m.src)}" alt="${esc(m.name)}" loading="lazy">${m.type==='video'?'<span class="play" aria-hidden="true"></span>':''}</button><figcaption><span>${esc(m.name)}</span><span>${esc(m.note)}</span></figcaption></figure>`;
+
+    const SMALL=3; // projects with this many images or fewer are packed side by side
+    const info=(c,p,i,tag)=>`<p class="label one">${c.title} · ${String(i+1).padStart(2,'0')}</p><${tag} class="one" title="${esc(p.title)}">${esc(p.title)}</${tag}><div class="series-meta">${p.meta.map(x=>`<span>${esc(x)}</span>`).join('')}</div>${p.link?`<a class="external-link" href="${p.link[1]}" target="_blank" rel="noopener">${p.link[0]}</a>`:''}`;
+    const linkHTML=m=>`<figure class="tile"><a class="film${m.poster?' has-poster':''}" href="${esc(m.href)}" target="_blank" rel="noopener" aria-label="${esc(m.name)} — watch the film (opens in a new tab)">${m.poster?`<img src="media/${esc(m.poster)}" alt="${esc(m.name)}" loading="lazy"><span class="play" aria-hidden="true"></span><span class="film-badge">${esc(m.kicker||'AI Film')} · Watch ↗</span>`:`<span class="film-kicker">${esc(m.kicker||'AI Film')}</span><span class="film-title">${esc(m.name)}</span><span class="film-cta"><i aria-hidden="true"></i>Watch ↗</span>`}</a><figcaption><span>${esc(m.name)}</span><span>${esc(m.note)}</span></figcaption></figure>`;
+    const gridHTML=p=>{const vis=p.media.filter(m=>m.type!=='link'),links=p.media.filter(m=>m.type==='link');const g=groups.push(vis.map(m=>({...m,project:p.title})))-1;return `<div class="grid" aria-label="${esc(p.title)} gallery">${links.map(linkHTML).join('')}${vis.map((m,k)=>tileHTML(m,g,k)).join('')}</div>`};
+    const renderCategory=c=>{let out='',pack=[];
+      const flush=()=>{if(pack.length){out+=`<div class="pack">${pack.join('')}</div>`;pack=[]}};
+      c.projects.forEach((p,i)=>{const n=p.media.length;
+        if(n<=SMALL){pack.push(`<article class="card" style="--n:${n};grid-column:span ${n}">${gridHTML(p)}${info(c,p,i,'h3')}</article>`)}
+        else{flush();out+=`<article class="series"><div class="series-info">${info(c,p,i,'h3')}<div class="strip-nav"><button type="button" class="sn-prev" aria-label="Scroll left">←</button><button type="button" class="sn-next" aria-label="Scroll right">→</button><span class="sn-count">${p.media.length} works</span></div></div><div class="strip">${gridHTML(p)}</div></article>`}});
+      flush();return out};
+    document.querySelector('#portfolio').innerHTML=categories.map(c=>`<section class="category" id="${c.id}"><header class="category-head"><i class="glyph ${c.glyph}" aria-hidden="true"></i><span class="category-no">${c.no} / 03</span><h2>${c.title}</h2><p>${c.intro}</p></header>${renderCategory(c)}</section>`).join('');
+
+    document.querySelectorAll('.series').forEach(a=>{const g=a.querySelector('.strip .grid'),pv=a.querySelector('.sn-prev'),nx=a.querySelector('.sn-next');if(!g||!pv)return;
+      const upd=()=>{pv.disabled=g.scrollLeft<=2;nx.disabled=g.scrollLeft+g.clientWidth>=g.scrollWidth-2;a.querySelector('.strip').classList.toggle('end',nx.disabled)};
+      pv.onclick=()=>g.scrollBy({left:-g.clientWidth*.8});nx.onclick=()=>g.scrollBy({left:g.clientWidth*.8});
+      g.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);g.querySelectorAll('img').forEach(i=>i.addEventListener('load',upd));upd()});
+    // lightbox with prev / next inside each project
+    const lb=document.querySelector('#lightbox'),stage=lb.querySelector('.lb-stage'),cName=lb.querySelector('.lb-name'),cCount=lb.querySelector('.lb-count');
+    let cur={g:0,k:0};
+    const show=()=>{const set=groups[cur.g],m=set[cur.k];stage.innerHTML=m.type==='video'?`<video controls autoplay playsinline poster="media/${esc(m.poster)}"><source src="media/${esc(m.src)}" type="video/mp4"></video>`:`<img src="media/${esc(m.src)}" alt="${esc(m.name)}">`;cName.textContent=`${m.project} — ${m.name}${m.note?' · '+m.note:''}`;cCount.textContent=`${cur.k+1} / ${set.length}`;const multi=set.length>1;lb.querySelector('.lb-prev').hidden=!multi;lb.querySelector('.lb-next').hidden=!multi};
+    const step=d=>{const n=groups[cur.g].length;cur.k=(cur.k+d+n)%n;show()};
+    document.querySelectorAll('.tile button').forEach(b=>b.addEventListener('click',()=>{cur={g:+b.dataset.g,k:+b.dataset.k};show();lb.showModal()}));
+    lb.querySelector('.lb-close').onclick=()=>lb.close();
+    lb.querySelector('.lb-prev').onclick=()=>step(-1);
+    lb.querySelector('.lb-next').onclick=()=>step(1);
+    lb.addEventListener('click',e=>{if(e.target===lb)lb.close()});
+    lb.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')step(-1);if(e.key==='ArrowRight')step(1)});
+    lb.addEventListener('close',()=>{stage.innerHTML=''});
+    document.querySelector('#year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
